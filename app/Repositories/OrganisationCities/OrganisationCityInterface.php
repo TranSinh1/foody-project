@@ -4,5 +4,5 @@ namespace App\Repositories\OrganisationCities;
 
 interface OrganisationCityInterface
 {
-	public function getById();
+    public function getNameCity();
 }
