@@ -18,7 +18,8 @@ class AuthController extends Controller
             'name' => 'required|string',
             'password' => 'required|confirmed',
             'phone' => 'required|min:10',
-            'address' => 'required|string|min:3'
+            'address' => 'required|string|min:3',
+            'role_id' => 'required|exists:roles,id'
         ]);
 
         $user = new user([
@@ -27,7 +28,8 @@ class AuthController extends Controller
             'password' => bcrypt($request->password),
             'phone' => $request->phone,
             'address' => $request->address,
-            'activation_token' => str_random(60)
+            'activation_token' => str_random(60),
+            'role_id' => $request->role_id
         ]);
         $user->save();
         $user->notify(new SignupActivate($user));
