@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ShipmentTypes;
+namespace App\Http\Controllers\Organisations\ShipmentTypes;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
