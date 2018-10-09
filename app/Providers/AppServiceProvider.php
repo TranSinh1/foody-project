@@ -37,5 +37,10 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\ShipmentTypes\ShipmentTypeInterface::class,
             \App\Repositories\ShipmentTypes\ShipmentTypeEloquent::class
         );
+
+        $this->app->singleton(
+            \App\Repositories\ConfirmType\ConfirmTypeInterface::class,
+            \App\Repositories\ConfirmType\ConfirmTypeEloquent::class
+        );
     }
 }

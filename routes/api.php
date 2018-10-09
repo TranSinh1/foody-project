@@ -28,6 +28,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('current-user', 'AuthController@currentUser');
     Route::resource('roles', 'Roles\RoleController');
     Route::resource('shipment-types', 'ShipmentTypes\ShipmentTypeController');
+    Route::resource('confirm-types', 'ConfirmTypes\ConfirmTypeController');
 });
 
 Route::group(['namespace' => 'Organisations'], function () {
