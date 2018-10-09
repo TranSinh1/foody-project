@@ -27,5 +27,10 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\OrganisationCities\OrganisationCityInterface::class,
             \App\Repositories\OrganisationCities\OrganisationCityRepository::class
         );
+
+        $this->app->singleton(
+            \App\Repositories\Roles\RoleInterface::class,
+            \App\Repositories\Roles\RoleEloquent::class
+        );
     }
 }
