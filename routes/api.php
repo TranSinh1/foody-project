@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('logout', 'AuthController@logout');
     Route::get('current-user', 'AuthController@currentUser');
     Route::resource('roles', 'Roles\RoleController');
+    Route::resource('shipment-types', 'ShipmentTypes\ShipmentTypeController');
 });
 
 Route::group(['namespace' => 'Organisations'], function () {

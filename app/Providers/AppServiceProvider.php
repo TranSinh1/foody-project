@@ -32,5 +32,10 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\Roles\RoleInterface::class,
             \App\Repositories\Roles\RoleEloquent::class
         );
+
+        $this->app->singleton(
+            \App\Repositories\ShipmentTypes\ShipmentTypeInterface::class,
+            \App\Repositories\ShipmentTypes\ShipmentTypeEloquent::class
+        );
     }
 }
