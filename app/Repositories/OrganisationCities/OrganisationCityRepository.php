@@ -3,7 +3,7 @@
 namespace App\Repositories\OrganisationCities;
 
 use App\Repositories\EloquentRepository;
-use App\OrganisationCity;
+use App\Models\OrganisationCity;
 
 class OrganisationCityRepository extends EloquentRepository implements OrganisationCityInterface
 {

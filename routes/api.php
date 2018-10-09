@@ -23,14 +23,11 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('signup-activate/{token}', 'AuthController@signupActivate')->name('active_account');
 });
 
-Route::group(['middleware' => 'auth:api'], function () {
+Route::group(['middleware' => 'auth:api', 'namespace' => 'Organisations'], function () {
     Route::get('logout', 'AuthController@logout');
     Route::get('current-user', 'AuthController@currentUser');
     Route::resource('roles', 'Roles\RoleController');
     Route::resource('shipment-types', 'ShipmentTypes\ShipmentTypeController');
     Route::resource('confirm-types', 'ConfirmTypes\ConfirmTypeController');
-});
-
-Route::group(['namespace' => 'Organisations'], function () {
-    Route::get('organisation-cities', 'OrganisationCityController@index');
+    Route::get('organisation-cities', 'Organisations\OrganisationCityController@index');
 });
