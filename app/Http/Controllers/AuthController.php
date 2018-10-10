@@ -85,9 +85,8 @@ class AuthController extends Controller
 
     public function currentUser (Request $request)
     {
-        $user = $request->user();
-
-        return response()->json(compact($user));
+        $user = Auth::user();
+        return response()->json($user);
     }
 
     public function signupActivate($token)

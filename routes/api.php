@@ -23,9 +23,12 @@ Route::group(['prefix' => 'auth'], function () {
     Route::get('signup-activate/{token}', 'AuthController@signupActivate')->name('active_account');
 });
 
-Route::group(['middleware' => 'auth:api', 'namespace' => 'Organisations'], function () {
+Route::group(['middleware' => 'auth:api'], function () {
     Route::get('logout', 'AuthController@logout');
     Route::get('current-user', 'AuthController@currentUser');
+});
+
+Route::group(['middleware' => 'auth:api', 'namespace' => 'Organisations'], function () {
     Route::resource('roles', 'Roles\RoleController');
     Route::resource('shipment-types', 'ShipmentTypes\ShipmentTypeController');
     Route::resource('confirm-types', 'ConfirmTypes\ConfirmTypeController');
