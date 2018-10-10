@@ -35,5 +35,6 @@ Route::group(['middleware' => 'auth:api', 'namespace' => 'Organisations'], funct
     Route::get('organisation-cities', 'Organisations\OrganisationCityController@index');
     Route::resources([
         'organisation-parents' => 'OrganisationParents\OrganisationParentController',
+        'shipment-status' => 'ShipmentStatus\ShipmentStatusController',
     ]);
 });

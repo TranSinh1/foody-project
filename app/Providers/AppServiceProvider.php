@@ -39,6 +39,11 @@ class AppServiceProvider extends ServiceProvider
         );
 
         $this->app->singleton(
+            \App\Repositories\ShipmentStatus\ShipmentStatusInterface::class,
+            \App\Repositories\ShipmentStatus\ShipmentStatusEloquent::class
+        );
+
+        $this->app->singleton(
             \App\Repositories\ConfirmType\ConfirmTypeInterface::class,
             \App\Repositories\ConfirmType\ConfirmTypeEloquent::class
         );
