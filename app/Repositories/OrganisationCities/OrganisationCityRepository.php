@@ -14,6 +14,6 @@ class OrganisationCityRepository extends EloquentRepository implements Organisat
 
     public function getNameCity()
     {
-        return OrganisationCity::select('name')->get();
+        return $this->_model->select('name')->get();
     }
 }

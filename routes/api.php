@@ -33,4 +33,7 @@ Route::group(['middleware' => 'auth:api', 'namespace' => 'Organisations'], funct
     Route::resource('shipment-types', 'ShipmentTypes\ShipmentTypeController');
     Route::resource('confirm-types', 'ConfirmTypes\ConfirmTypeController');
     Route::get('organisation-cities', 'Organisations\OrganisationCityController@index');
+    Route::resources([
+        'organisation-parents' => 'OrganisationParents\OrganisationParentController',
+    ]);
 });
