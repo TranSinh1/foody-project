@@ -42,5 +42,10 @@ class AppServiceProvider extends ServiceProvider
             \App\Repositories\ConfirmType\ConfirmTypeInterface::class,
             \App\Repositories\ConfirmType\ConfirmTypeEloquent::class
         );
+
+        $this->app->singleton(
+            \App\Repositories\OrganisationParents\OrganisationParentInterface::class,
+            \App\Repositories\OrganisationParents\OrganisationParentEloquent::class
+        );
     }
 }
