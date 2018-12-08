@@ -12,7 +12,7 @@ class ConfirmTypeEloquent extends EloquentRepository implements ConfirmTypeInter
         return \App\Models\ConfirmType::class;
     }
     
-    public function getNameConfirmType ()
+    public function getNameConfirmType()
     {
         return $this->_model->select('name')->get();
     }

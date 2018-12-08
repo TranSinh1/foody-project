@@ -8,12 +8,12 @@ abstract class EloquentRepository implements RepositoryInterface
 {
     protected $_model;
 
-    public function __construct ()
+    public function __construct()
     {
         $this->setModel();
     }
 
-    abstract public function getModel ();
+    abstract public function getModel();
 
     public function setModel ()
     {
@@ -22,26 +22,26 @@ abstract class EloquentRepository implements RepositoryInterface
         );
     }
 
-    public function getAll ()
+    public function getAll()
     {
         return $this->_model->all();
     }
 
-    public function find ($id)
+    public function find(int $id)
     {
         $result = $this->_model->find($id);
 
         return $result;
     }
 
-    public function create (array $data)
+    public function create(array $data)
     {
         $result = $this->_model->create($data);
 
         return $result;
     }
 
-    public function update ($id, array $data)
+    public function update(int $id, array $data)
     {
         $result = $this->_model->find($id);
 
@@ -54,7 +54,7 @@ abstract class EloquentRepository implements RepositoryInterface
         return $result;
     }
 
-    public function delete ($id)
+    public function delete(int $id)
     {
         $result = $this->_model->find($id);
 

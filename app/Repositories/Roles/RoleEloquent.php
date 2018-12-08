@@ -7,7 +7,7 @@ use App\Repositories\Roles\RoleInterface;
 
 class RoleEloquent extends EloquentRepository implements RoleInterface
 {
-    public function getModel ()
+    public function getModel()
     {
         return \App\Models\Role::class;
     }

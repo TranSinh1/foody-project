@@ -12,7 +12,7 @@ class ShipmentTypeEloquent extends EloquentRepository implements ShipmentTypeInt
         return \App\Models\ShipmentType::class;
     }
     
-    public function getNameShipmentType ()
+    public function getNameShipmentType()
     {
         return $this->_model->select('name')->get();
     }

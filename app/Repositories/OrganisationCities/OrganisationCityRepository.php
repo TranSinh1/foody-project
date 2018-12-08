@@ -7,7 +7,7 @@ use App\Models\OrganisationCity;
 
 class OrganisationCityRepository extends EloquentRepository implements OrganisationCityInterface
 {
-    public function getModel ()
+    public function getModel()
     {
         return \App\Models\OrganisationCity::class;
     }

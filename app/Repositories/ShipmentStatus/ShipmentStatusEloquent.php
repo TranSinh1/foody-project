@@ -12,7 +12,7 @@ class ShipmentStatusEloquent extends EloquentRepository implements ShipmentStatu
         return \App\Models\ShipmentStatus::class;
     }
     
-    public function getNameShipmentStatus ()
+    public function getNameShipmentStatus()
     {
         return $this->_model->select('status')->get();
     }

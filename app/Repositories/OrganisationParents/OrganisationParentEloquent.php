@@ -6,12 +6,12 @@ use App\Repositories\OrganisationParents\OrganisationParentInterface;
 
 class OrganisationParentEloquent extends EloquentRepository implements OrganisationParentInterface
 {
-    public function getModel ()
+    public function getModel()
     {
         return \App\Models\OrganisationParent::class;
     }
 
-    public function getName ()
+    public function getName()
     {
         return $this->_model->select('name')->get();
     }
